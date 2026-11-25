@@ -166,3 +166,72 @@ a { color: inherit; }
   padding: .2rem .65rem;
   border-radius: 999px;
 }
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+@media (max-width: 760px) {
+  .mentor-grid { grid-template-columns: 1fr; }
+}
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--light-blue);
+  color: var(--navy);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mentor-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+
+.role {
+  font-size: .85rem;
+  color: var(--muted);
+}
+.card {
+  position: relative;
+}
+
+.field {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--light-blue);
+  color: var(--navy);
+  font-size: .7rem;
+  font-weight: 600;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+}
+.request-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.request-link:hover {
+  text-decoration: underline;
+}
+.mentor-grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-link {
+  margin-top: auto;
+  padding-top: 1rem;
+}

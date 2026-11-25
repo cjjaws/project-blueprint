@@ -4,12 +4,19 @@
 <section class="container">
   <h1>Find your mentor</h1>
 
+<div class="mentor-grid">
   {% for mentor in mentors %}
     <div class="card">
-      <h3>{{ mentor.name }}</h3>
-      <p>{{ mentor.title }} · {{ mentor.company }}</p>
-      <p>{{ mentor.bio }}</p>
+        <span class="field">{{ mentor.field }}</span>
+    <div class="mentor-head">
+  <div class="avatar">{{ mentor.name.split()[0][0] }}{{ mentor.name.split()[-1][0] }}</div>
+  <div>
+    <h3>{{ mentor.name }}</h3>
+    <p class="role">{{ mentor.title }} · {{ mentor.company }}</p>
+  </div>
+</div>
 
+<p>{{ mentor.bio }}</p>
       <div class="tags">
         {% for tag in mentor.tags %}
           <span class="tag">{{ tag }}</span>
@@ -17,5 +24,6 @@
       </div>
     </div>
   {% endfor %}
+</div>
 </section>
 {% endblock %}
