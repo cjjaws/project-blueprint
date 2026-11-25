@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="lead">
+        Project Blueprint connects Black high school students with
+        local Black professionals for real career guidance.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#">Find a mentor</a>
+        <a class="btn btn-outline" href="{{ url_for('safety') }}">How it stays safe</a>
+      </div>
+    </div>
+
+    <!-- Placeholder for your photo. Swap in an <img> later. -->
+    <div class="hero-image">
+      <div class="badge">
+        <span>one conversation can change a path</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <h3>Search</h3>
+        <p>Browse verified Black STEM professionals across metro Atlanta.</p>
+      </li>
+      <li>
+        <h3>Request</h3>
+        <p>Choose a 30-minute virtual call or an email-only conversation.</p>
+      </li>
+      <li>
+        <h3>Email is drafted</h3>
+        <p>We write a clear, structured request email for you.</p>
+      </li>
+      <li>
+        <h3>Handshake</h3>
+        <p>It goes to the mentor and your parent together. No private chats, ever.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{% endblock %}

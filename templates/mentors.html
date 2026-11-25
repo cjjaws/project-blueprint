@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container">
+  <h1>Find your mentor</h1>
+
+  {% for mentor in mentors %}
+    <div class="card">
+      <h3>{{ mentor.name }}</h3>
+      <p>{{ mentor.title }} · {{ mentor.company }}</p>
+      <p>{{ mentor.bio }}</p>
+
+      <div class="tags">
+        {% for tag in mentor.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% endblock %}
